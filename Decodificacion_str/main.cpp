@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -6,6 +7,7 @@ void metodo1(int[], int[], int, int);
 void metodo2(int[], int[], int, int);
 int cuentaUnosyCeros(int, int*);
 void imprimir(int[], int);
+void texto(int[], string, int);
 
 int main()
 {
@@ -17,6 +19,10 @@ int main()
     int *pDeco = decodificado;
     int num = 4; //Semilla
     string cadena = "";
+
+    metodo1(pCod, pDeco, num, tam);
+    texto(decodificado, cadena, tam);
+    cout << cadena << endl;
 
 
     return 0;
@@ -167,4 +173,31 @@ void imprimir(int cadena[], int tamano){
         cout << cadena[i];
     }
     cout << endl;
+}
+
+void texto(int binario[], string alpha, int tam){
+    int bloque = 7;
+    int byte = 8;
+    int *pBinario = binario;
+    string letra = "";
+    int posicion = 0; //Controla la posicion de las letras en el char
+
+
+    for(int i = 0; i < tam; i = i + byte){
+        int suma = 0;
+        bloque = 7;
+        for(int j = 0; j <= byte; j++){
+            if(*(pBinario + bloque) == 1){
+                suma = suma + pow(2,j);
+                bloque--;
+            }
+            else{
+                bloque--;
+            }
+        }
+        letra = suma;
+        alpha[posicion] = suma;
+        posicion++;
+        pBinario = pBinario + byte;
+    }
 }
