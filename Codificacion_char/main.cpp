@@ -14,10 +14,13 @@ void imprimir(int[], int);
 
 int main()
 {
-
-
+    ofstream fout;
     char cadena[256];
-    cout << "Ingrese cadena: "; cin >> cadena;
+    cout << "Ingrese lo que desee: "; cin >> cadena;
+    fout.open("Sudo.txt");
+    fout << cadena;
+    fout.close();
+
     int num = 4;
     int tamCadena = longitud(cadena);
     int tamano = longitud(cadena) * 8; //Tamaño del arreglo original y codificado

@@ -19,10 +19,28 @@ int main()
     int *pDeco = decodificado;
     int num = 4; //Semilla
     string cadena = "";
+    int opcion = 0;
 
-    metodo1(pCod, pDeco, num, tam);
-    texto(decodificado, cadena, tam);
-    cout << cadena << endl;
+    cout << "Ingrese el 1 para usar el primer metodo. " << endl;
+    cout << "Ingrese el 2 para usar el segundo metodo. " << endl;
+    cout << "La opcion: "; cin >> opcion;
+    cout << "Ingrese la semilla de codificacion: "; cin >> num;
+
+    while(opcion != 1 & opcion != 2){
+        cout << "Caracter no definido, por favor ingrese otro: ";  cin >> opcion;
+    }
+    if(opcion == 1){
+        metodo1(pCod, pDeco, num, tam);
+        imprimir(pDeco, tam);
+
+    }
+    else{
+        pCod = cod2;
+        metodo2(pCod, pDeco, num, tam);
+        imprimir(pDeco, tam);
+
+    }
+
 
 
     return 0;

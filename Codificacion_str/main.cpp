@@ -37,14 +37,19 @@ int main()
         cout << "Caracter no definido, por favor ingrese otro: ";  cin >> opcion;
     }
     if(opcion == 1){
+        binario(cadena, pOriginal);
         metodo1(num, (tamCadena * 8), pOriginal, pCodificado);
+        imprimir(pCodificado, tamCadena * 8);
         fout << codificado;
         fout.close();
+
     }
     else{
+        binario(cadena, pOriginal);
         metodo2(num, (tamCadena * 8), pOriginal, pCodificado);
         fout << codificado;
         fout.close();
+        imprimir(codificado, tamCadena * 8);
     }
 
 
