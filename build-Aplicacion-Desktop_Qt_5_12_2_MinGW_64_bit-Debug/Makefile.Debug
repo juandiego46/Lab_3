@@ -50,7 +50,7 @@ OBJECTS_DIR   = debug
 SOURCES       = ..\Aplicacion\main.cpp 
 OBJECTS       = debug/main.o
 
-DIST          =   ..\Aplicacion\main.cpp
+DIST          =  Mis_funciones.h ..\Aplicacion\main.cpp
 QMAKE_TARGET  = Aplicacion
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = Aplicacion.exe

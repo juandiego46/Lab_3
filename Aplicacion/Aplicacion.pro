@@ -5,3 +5,6 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp
+
+HEADERS += \
+    Mis_funciones.h

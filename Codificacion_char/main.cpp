@@ -18,8 +18,7 @@ int main()
     char cadena[256];
     cout << "Ingrese lo que desee: "; cin >> cadena;
     fout.open("Sudo.txt");
-    fout << cadena;
-    fout.close();
+
 
     int num = 4;
     int tamCadena = longitud(cadena);
@@ -47,6 +46,10 @@ int main()
         imprimir(original, tamano);
         primerMetodo(num, tamano, original, codificado);
         cout << "Codificado: " << endl;
+        for(int i = 0; i < tamano; i++){
+            fout << codificado[i];
+        }
+        fout.close();
         imprimir(codificado, tamano);
     }
     else{
@@ -58,6 +61,10 @@ int main()
         imprimir(original, tamano);
         segundoMetodo(num, tamano, original, codificado);
         cout << "Codificado: " << endl;
+        for(int i = 0; i < tamano; i++){
+            fout << codificado[i];
+        }
+        fout.close();
         imprimir(codificado, tamano);
     }
 

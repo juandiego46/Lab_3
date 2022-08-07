@@ -50,7 +50,7 @@ OBJECTS_DIR   = release
 SOURCES       = ..\Aplicacion\main.cpp 
 OBJECTS       = release/main.o
 
-DIST          =   ..\Aplicacion\main.cpp
+DIST          =  Mis_funciones.h ..\Aplicacion\main.cpp
 QMAKE_TARGET  = Aplicacion
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Aplicacion.exe
